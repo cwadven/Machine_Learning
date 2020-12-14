@@ -1,5 +1,5 @@
 # 머신러닝 Python, Scikit-learn, TensorFlow
-![](https://github.com/cwadven/Machine_Learning/blob/master/sumnail.jpg=250x)<br>
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/sumnail.jpg" alt="drawing" width="200"/>
 
 ## 목차
 
