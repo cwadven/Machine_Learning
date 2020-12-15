@@ -57,7 +57,7 @@
 #### 4. 특성 행렬
 특정 하나의 꽃 샘플을 나타내고 4차원 행 벡터로 쓸 수 있다.
 
-<img src="https://latex.codecogs.com/svg.latex?x^{(i)}\in R^{1*4}" title="x^{(i)}\in R^{1*4}" />
+<img src="https://latex.codecogs.com/svg.latex?x^{(i)}\in R^{1*4}" title="x^{(i)}\inR^{1*4}" />
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter1/img/row.PNG" alt="drawing" width="300"/><br>
 
@@ -65,7 +65,7 @@
 
 150차원의 열 벡터 
 
-<img src="https://latex.codecogs.com/svg.latex?x_{j}\in R^{150*1}" title="x_{j}\in R^{150*1}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?x_{j}\in R^{150*1}" title="x_{j}\inR^{150*1}" /><br>
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter1/img/col.PNG" alt="drawing" width="150"/><br>
 
@@ -73,4 +73,4 @@
 
 150차원의 열 벡터로 저장
 
-<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter1/img/target.PNG" alt="drawing" width="150"/><br>
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter1/img/target.PNG" alt="drawing" width="350"/><br>
