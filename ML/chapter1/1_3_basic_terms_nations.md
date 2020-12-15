@@ -36,26 +36,28 @@ $$X\in R^{150*4}$$
 #### 2.
 굵은소문자는 백터를 나타내고,
 
-$$x\in R^{150*4}$$
+<img src="https://latex.codecogs.com/svg.latex?x\in R^{150*4}" title="x\in R^{150*4}" /><br>
 
 굵은 대문자는 행렬을 나타낸다
 
-$$X\in R^{150*4}$$
+<img src="https://latex.codecogs.com/svg.latex?X\in R^{150*4}" title="X\in R^{150*4}" /><br>
 
 #### 3.
 백터나 행렬에 있는 하나의 원소를 나타낼 때는 이탤릭체를 사용
 
-$$x^{(n)}$$ $$X^{(n)}_{(m)}$$
+<img src="https://latex.codecogs.com/svg.latex?x^{(n)}$$ $$X^{(n)}_{(m)}" title="x^{(n)}$$ $$X^{(n)}_{(m)}" /><br>
 
 예제)
-$$x^{(행)}_{(열)}$$
-$$x^{150}_{1}$$
+<img src="https://latex.codecogs.com/svg.latex?x^{(row)}_{(col)}" title="x^{(row)}_{(col)}" /><br>
+
+<img src="https://latex.codecogs.com/svg.latex?x^{150}_{1}" title="x^{150}_{1}" /><br>
+
 150번째 샘플(행)의 1번째 차원(열)
 
 #### 4. 특성 행렬
 특정 하나의 꽃 샘플을 나타내고 4차원 행 벡터로 쓸 수 있다.
 
-$$x^{(i)}\in R^{1*4}$$
+<img src="https://latex.codecogs.com/svg.latex?x^{(i)}\in R^{1*4}" title="x^{(i)}\in R^{1*4}" />
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter1/img/row.PNG" alt="drawing" width="300"/><br>
 
@@ -63,7 +65,7 @@ $$x^{(i)}\in R^{1*4}$$
 
 150차원의 열 벡터 
 
-$$x_{j}\in R^{150*1}$$
+<img src="https://latex.codecogs.com/svg.latex?x_{j}\in R^{150*1}" title="x_{j}\in R^{150*1}" /><br>
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter1/img/col.PNG" alt="drawing" width="150"/><br>
 
