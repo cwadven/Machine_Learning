@@ -29,23 +29,23 @@
 
 150개의 샘플과 네 개의 특성을 가진 데이터셋은 150 X 4 크기의 행렬로 쓸수 있다.
 
-$$X\in R^{150*4}$$
+<img src="https://latex.codecogs.com/svg.latex?X\in R^{150*4}" title="X\in R^{150*4}" /><br>
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter1/img/matrix.PNG" alt="drawing" width="300"/><br>
 
 #### 2.
 굵은소문자는 백터를 나타내고,
 
-<img src="https://latex.codecogs.com/svg.latex?x\in R^{150*4}" title="x\in R^{150*4}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?x\in R^{150*4}" title="x\inR^{150*4}" /><br>
 
 굵은 대문자는 행렬을 나타낸다
 
-<img src="https://latex.codecogs.com/svg.latex?X\in R^{150*4}" title="X\in R^{150*4}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?X\in R^{150*4}" title="X\inR^{150*4}" /><br>
 
 #### 3.
 백터나 행렬에 있는 하나의 원소를 나타낼 때는 이탤릭체를 사용
 
-<img src="https://latex.codecogs.com/svg.latex?x^{(n)}$$ $$X^{(n)}_{(m)}" title="x^{(n)}$$ $$X^{(n)}_{(m)}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?x^{(n)} X^{(n)}_{(m)}" title="x^{(n)} X^{(n)}_{(m)}" /><br>
 
 예제)
 <img src="https://latex.codecogs.com/svg.latex?x^{(row)}_{(col)}" title="x^{(row)}_{(col)}" /><br>
