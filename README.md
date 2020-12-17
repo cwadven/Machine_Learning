@@ -15,7 +15,9 @@
 ---
 
 ### 2장
-- [???](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/XXX.md "???")
+- [인공 뉴런 : 초기 머신러닝의 간단한 역사](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/2_1_early_machine_learning.md "인공 뉴런 : 초기 머신러닝의 간단한 역사")
+- [파이썬으로 퍼셉트론 학습 알고리즘 구현(붓꽃)](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/2_2_perceptron.md "파이썬으로 퍼셉트론 학습 알고리즘 구현(붓꽃)")
+- [???](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/2_3_linear_neraul.md "???")
 
 ---
 
