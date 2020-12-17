@@ -100,7 +100,7 @@ df.tail()
 그렇지 않으면 계속 가중치를 업데이트 한다!
 ~~~
 
-<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/linaer.PNG" alt="drawing" width="600"/><br>
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/linear.PNG" alt="drawing" width="600"/><br>
 
 ```python
 import matplotlib.pyplot as plt
