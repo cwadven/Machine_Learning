@@ -18,22 +18,32 @@ MCP 뉴런과 로젠블라트의 임계 퍼셉트론 모델 이면에 있는 전
 <img src="https://latex.codecogs.com/svg.latex?x_{i}" title="x_{i}" /><br>
 0과 1사이의 값으로 설정 (비율로)
 
+<br>
+
 2. 
 > **`y` : 라벨은 -1 혹은 1로 변환 시켜준다. (추후, 임계함수를 통해)**
 
+<br>
+
 3. 
 > **`학습률`을 작은 값 중에 초기화 시킨다. 예) 0.01**
+
+<br>
 
 4. 
 입력값이 n개 일 경우 세타를 위해서 입력값을 n+1개로 하고, 추가된 즉 x0은 1로 한다.
 
 <img src="https://latex.codecogs.com/svg.latex?x_{0}=1" title="x_{0}=1" /><br>
 
+<br>
+
 5. 
 그래서 초기에 가중치들 w0, w1, ... ,wn 개를 랜덤으로 초기화 시키는데, 0과 가깝지만 0이 아닌 수로 초기화 시킨다.
 
 랜덤으로 초기화<br>
 <img src="https://latex.codecogs.com/svg.latex?w_{0}=-0.3,w_{1}=-0.3,w_{2}=0.1,w_{n}=0.8" title="w_{0}=-0.3,w_{1}=-0.3,w_{2}=0.1,w_{n}=0.8" /><br>
+
+<br>
 
 6. 
 초기화를 시켰으니 z를 구할 수 있다.
@@ -43,6 +53,8 @@ MCP 뉴런과 로젠블라트의 임계 퍼셉트론 모델 이면에 있는 전
 위의 식을 통해서 z를 임계 함수 즉, Z가 0 보다 작으면 -1, 0 보다 크면 1로 변환하는 식을 통해 연산을 하면 컴퓨터 해당 -1 혹은 1로 예측한 값이 나온다.
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/function.PNG" alt="drawing" width="600"/><br>
+
+<br>
 
 7. 
 컴퓨터가 예측을 했기 때문에 `학습률*(오차)*각입력값`를 하여 결과는 각각의 `x`에 대한 `변화한 w(△w)`값이 된다.<br>
@@ -67,11 +79,15 @@ z = w0x1 + w1x1 + w2x2 + w3x3
 z 가 만약 0.0 보다 크면 1, 0.0 보다 작으면 -1로 또 예측
 ~~~
 
+<br>
+
 8. 
 그래서 그 `변화한 w값(△w)`을 이전 `w`값에 더한다.
 
 이걸 epoch 만큼 반복 한다.
 
+<br>
+
 9. 
 **예제 테이블**<br>
-<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/table.PNG" alt="drawing" width="600"/><br>
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/table.PNG" alt="drawing" width="600"/><br><br>
