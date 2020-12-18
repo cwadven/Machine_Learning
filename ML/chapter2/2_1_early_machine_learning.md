@@ -27,13 +27,13 @@ MCP 뉴런과 로젠블라트의 임계 퍼셉트론 모델 이면에 있는 전
 
 그래서 초기에 가중치들 w0, w1, ... ,wn 개를 랜덤으로 초기화 시키는데, 0과 가깝지만 0이 아닌 수로 초기화 시킨다.
 
-<img src="https://latex.codecogs.com/svg.latex?w_{0}w_{1}w_{2}w_{n}" title="w_{0}w_{1}w_{2}w_{n}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?w_{0}=-0.3w_{1}=-0.3w_{2}=0.1w_{n}=0.8" title="w_{0}=-0.3w_{1}=-0.3w_{2}=0.1w_{n}=0.8" /><br>
 
 초기화를 시켰으니 z를 구할 수 있다.
 
 z = w0x0 + w1x1 + w2x2 ... wnxn --> - ~ 0 ~ +
 
-<img src="https://latex.codecogs.com/svg.latex?z=w_{0}x_{0}w_{1}x_{1}w_{2}x_{2}w_{n}x_{n}" title="z=w_{0}x_{0}w_{1}x_{1}w_{2}x_{2}w_{n}x_{n}" /><br>
+<img src="https://latex.codecogs.com/svg.latex?z=w_{0}x_{0}+w_{1}x_{1}+w_{2}x_{2}+w_{n}x_{n}" title="z=w_{0}x_{0}+w_{1}x_{1}+w_{2}x_{2}+w_{n}x_{n}" /><br>
 
 
 z를 임계 함수를 통해 Z가 0 보다 작으면 -1, 0 보다 크면 1로 컴퓨터 해당 -1 혹은 1로 예측한 값이 나온다.
