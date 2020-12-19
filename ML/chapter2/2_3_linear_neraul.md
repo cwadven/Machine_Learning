@@ -1,22 +1,24 @@
 ## 적응형 선형 뉴런과 학습의 수렴
 
-> **선형 뉴런 (ADALINE)**
+> **선형 뉴런 (ADALINE)**<br>
 아달린은 연속 함수로 비용 함수를 정의하고 최소화 하는 핵심 개념을 보여준다.<br>
 `로지스틱 회귀`, `서포트 백터 머신` 같은 분류를 위한 고급 머신러닝 모델과 회귀 모델을 이해하는데 도움이 될 것이다.
 
-> **퍼셉트론과 아달린의 차이점**
-퍼셉트론 임계함수를 통해 컴퓨터가 예측하는 것을 -1 혹은 1로 정의
-아달린 z를 바로 실제 값과 바로 - 함.<br>
+> **퍼셉트론과 아달린의 차이점**<br>
+퍼셉트론 임계함수를 통해 컴퓨터가 예측하는 것을 -1 혹은 1로 정의<br>
+아달린 z를 바로 실제 값과 바로 - 함.<br><br>
 `퍼셉트론`은 n(y-y)x를 하여 △w를 구해 이용하는데,
 `아달린`은 n(y-y)x을 하는데 한 사이클이 끝나고 그 모든 x특성의 △w를 더한다.
 그리고 그 △w를 이전의 w와 더해서 가중치를 구한다.
 
-> **경사 하강법**
+> **경사 하강법**<br>
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/gradient.PNG" alt="drawing" width="150"/><br>
 위의 식에서 1/2는 그래디언트를 간소하게 만들려고 편의상 추가한 것이다.
 전역 최솟값에 도달할 때까지 언덕을 내려오는 것으로 묘사.
 <br>
-**경사하강법**
+
+**경사하강법**<br>
+
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/gradient2.PNG" alt="drawing" width="600"/><br>
 
 ### 아달린 순차적 방법
