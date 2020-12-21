@@ -22,5 +22,4 @@
 ---
 
 ### 3장
-- [???](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/XXX.md "???")
-- [???](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/XXX.md "???")
+- [사이킷런 첫걸음 : 퍼셋트론 훈련](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/3_2_sklearn_perceptron.md "사이킷런 첫걸음 : 퍼셋트론 훈련")
