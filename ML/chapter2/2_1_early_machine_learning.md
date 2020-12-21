@@ -100,3 +100,8 @@ z 가 만약 0.0 보다 크면 1, 0.0 보다 작으면 -1로 또 예측
 
 **예제 테이블**<br>
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/table.PNG" alt="drawing" width="600"/><br><br>
+
+
+**`순서 10)`**
+
+최적의 가중치 w들을 구했으면 예측하고 싶은 특성을 해당 w에 넣어서 z를 구하고, z를 임계함수 안에 넣어서 분류 시킨다.

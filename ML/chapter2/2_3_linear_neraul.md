@@ -43,6 +43,10 @@
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s9.PNG" alt="drawing" width="600"/><br><br>
 
+**`끝난 후 예측은`** <br><br>
+
+최적의 가중치 w들을 구했으면 예측하고 싶은 특성을 해당 w에 넣어서 z를 구하고, z를 임계함수 안에 넣어서 분류 시킨다.
+
 ---
 
 ### 파이썬으로 아달린 구현
