@@ -21,10 +21,29 @@
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/gradient2.PNG" alt="drawing" width="600"/><br>
 
-### 아달린 순차적 방법
-~~~
+---
 
-~~~
+### 아달린 순차적 방법
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s1.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s2.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s3.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s4.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s5.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s6.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s7.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s8.PNG" alt="drawing" width="600"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/s9.PNG" alt="drawing" width="600"/><br><br>
+
+---
 
 ### 파이썬으로 아달린 구현
 
