@@ -69,3 +69,72 @@ y_pred = ppn.predict(X_test_std)
 # 혹은 sklearn에서 제공하는 정확도를 바로 구하는 함수 사용
 print('정확도: %.2f' % accuracy_score(y_test, y_pred))
 ```
+
+---
+
+### 사이킷런 개인 프로젝트
+
+##### 하지만 잘 동작하는지는 모르겠다... 정확도는 높게 나오기는 하지만.... 뭔가 문제가 있을 수도...
+
+```python
+# 데이터 가져오기
+from sklearn import datasets
+# x의 입력값을 0~1 사이로
+from sklearn.preprocessing import StandardScaler
+# 데이터를 쉽게 train이랑 test로 분리
+from sklearn.model_selection import train_test_split
+# 퍼셉트론 알고리즘 사용
+from sklearn.linear_model import Perceptron
+import pandas as pd
+import numpy as np
+
+# 얼마나 예측 잘 했는지 확인 하기 위해서 사용
+from sklearn.metrics import accuracy_score
+
+
+# csv 파일 가져오기
+loan = pd.read_csv('ML/chapter3/UniversalBank.csv')
+
+# 내가 원하는 입력값 뽑아서 가져오기
+X = []
+y = []
+
+for row_index, row in loan.iterrows():
+    X.append([int(row.loc["Age"]), int(row.loc["Experience"]), int(row.loc["Income"]), int(row.loc["Family"]), int(row.loc["Education"]), int(row.loc["Online"]), int(row.loc["CreditCard"])])
+    y.append(int(row.loc["PersonalLoan"]))
+
+# 넘파이화
+X = np.array(X)
+y = np.array(y)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=1, stratify=y
+)
+
+print(X_train.shape)
+print(X_test.shape)
+
+# x의 특성 값을 0~1 사이로 초기화
+sc = StandardScaler()
+# 형태 틀 만들기
+sc.fit(X_train)
+# 틀에 넣어서 StandardScaler는 평균을 제거하고 데이터를 단위 분산으로 조정하여 만들기
+X_train_std = sc.transform(X_train)
+X_test_std = sc.transform(X_test)
+
+# 퍼셉트론 알고리즘 객체 생성
+ppn = Perceptron(max_iter=60, eta0=0.1, tol=1e-3, random_state=1)
+# 학습시키기 (StandardScaler로 변환한 값을 가진 특성, 라벨) / 배열 : (2차원, 1차원)
+ppn.fit(X_train_std, y_train)
+
+y_pred = ppn.predict(X_test_std)
+
+# 정확도 비교하기
+# 정확도 = "1 - 오차"
+# 오차 = 틀린 개수 / 전체 개수 = 오차
+# 틀린 개수 : y_test의 값과 y_pred의 각 인덱스가 다른 것들의 개수를 샌다
+# numpy -> (y_test != y_pred).sum()
+# 혹은 sklearn에서 제공하는 정확도를 바로 구하는 함수 사용
+print('잘못 분류된 샘플 개수 : %d' % (y_test != y_pred).sum())
+print('정확도: %.2f' % accuracy_score(y_test, y_pred))
+```
