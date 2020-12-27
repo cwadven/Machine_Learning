@@ -22,16 +22,61 @@
 과대적합 : 되면 좋지 못한것...
 ~~~
 
-> **퍼셉트론과 아달린의 차이점**<br>
-퍼셉트론 임계함수를 통해 컴퓨터가 예측하는 것을 -1 혹은 1로 정의<br>
-아달린 z를 바로 실제 값과 바로 - 함.<br><br>
-`퍼셉트론`은 n(y-y)x를 하여 △w를 구해 이용하는데,<br>
-`아달린`은 n(y-y)x을 하는데 한 사이클이 끝나고 그 모든 x특성의 △w를 더한다.
-그리고 그 △w를 이전의 w와 더해서 가중치를 구한다.
+---
 
-> **경사 하강법**<br>
-<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter2/img/gradient.PNG" alt="drawing" width="150"/><br>
-위의 식에서 1/2는 그래디언트를 간소하게 만들려고 편의상 추가한 것이다.
-전역 최솟값에 도달할 때까지 언덕을 내려오는 것으로 묘사.
-<br>
+### SVM 이용한 코드
 
+```python
+import numpy as np
+import pandas as pd
+
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+
+from sklearn.svm import SVC
+
+# 얼마나 예측 잘 했는지 확인 하기 위해서 사용
+from sklearn.metrics import accuracy_score
+
+# csv 파일 가져오기
+dataset = pd.read_csv("ML/chapter3/accidentsnn.csv")
+
+# X랑 y 분리 시키기
+X = dataset.drop(["MAX_SEV_IR"], axis=1)
+y = dataset["MAX_SEV_IR"]
+
+# 분리 시켜줄 것 생각해 보기
+sc = StandardScaler()
+
+# Standard 적용한 값 슬라이싱을 통해 재할당 하기!
+# X.loc[[행], [열]] : 이름으로 접근 / X.iloc[[행], [열]] : index로 접근
+X.iloc[:, [3]] = sc.fit_transform(X.iloc[:, [3]])
+
+
+X["ALCHL_I"] = X["ALCHL_I"].replace([1,2], ['Yes', 'No'])
+X["SUR_COND"] = X["SUR_COND"].replace([1,2,3,9], ['dry', 'wet', 'snow', 'non'])
+
+
+# 수치화된 데이터를 가변수화
+# 가변수화를 하는 이유는 만약 1:월, 2:화, 3:수 일 경우 1 + 2 = 3 이기에 수요일과 관계가 생길 수 있기 때문
+# get_dummies(dataframe, dataframe에 가변수화 할 열, drop_first=True)
+# drop_first : 가변수화할 때 이상한 값이 나오게 됩니다! 그거 막기 위함
+X = pd.get_dummies(X[["ALCHL_I", "PROFIL_I_R", "VEH_INVL", "SUR_COND"]],
+columns=["ALCHL_I", "SUR_COND"], drop_first=True)
+
+
+# 전처리를 했으니 학습용 데이터와 검증용 데이터 분류
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=1, stratify=y
+)
+
+# SVM 알고리즘 사용
+svm = SVC(kernel='rbf', random_state=1, gamma=0.2, C=1.0)
+svm.fit(X_train, y_train)
+
+# 모델 검증
+y_pred = svm.predict(X_test)
+
+print('잘못 분류된 샘플 개수 : %d' % (y_test != y_pred).sum())
+print('정확도: %.2f' % accuracy_score(y_test, y_pred))
+```
