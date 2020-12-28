@@ -28,6 +28,7 @@
 
 - [사이킷런 첫걸음 : 퍼셋트론 훈련](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/3_2_sklearn_perceptron.md "사이킷런 첫걸음 : 퍼셋트론 훈련")
 - [서포트 벡터 머신을 사용항 최대 마진 분류](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/3_4_SVM.md "서포트 벡터 머신을 사용항 최대 마진 분류")
+- [결정트리 학습](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/3_6_decision_tree.md "결정트리 학습")
 
 ---
 
