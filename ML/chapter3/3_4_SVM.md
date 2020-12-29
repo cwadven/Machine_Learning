@@ -12,6 +12,58 @@
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/img/SVM.PNG" alt="drawing" width="600"/><br><br>
 
+결정경계를 나누는데, 그 중에서 최적화된 직선을 구하기 위해서 가장 바깥쪽에 있는 데이터(서포트 벡터)가 서로 상대방과 마주보는 평행한 직선을 구한다.
+
+- 용어
+    - 마진
+    - 초평면 == 결정 경계
+    - 서포트 벡터 (가장 바깥쪽 데이터)
+
+순서
+
+서포트 백터를 통해 2개의 직선을 구한다
+
+수평인 직선과 직선 둘 사이의 거리 가장 최대화 되는 거리는 직각일 경우 `|| ||` 이걸 `노름`이라고 한다.
+
+---
+
+### 수학적 지식 : 선형대수 (원점과 점 사이 거리 : 노름)
+
+> **거리 : 피타고라스의 정리**
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/img/pitagoras.PNG" alt="drawing" width="600"/><br><br>
+
+
+> **좌표의 거리 구하기**
+
+- 유클리드 거리
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/img/coord.PNG" alt="drawing" width="600"/><br><br>
+
+- 유클리드 거리 예)
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/img/coord1.PNG" alt="drawing" width="600"/><br><br>
+
+> **노름**
+
+- 원점에서 점에 이르는 거리 (점 1개)
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/img/norm.PNG" alt="drawing" width="450"/><br><br>
+
+- 유클리디안 노름 (점 1개, 만약 다차원이면 )
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/img/norm3.PNG" alt="drawing" width="450"/><br><br>
+
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter3/img/ucle.PNG" alt="drawing" width="450"/><br><br>
+
+---
+
+### 최대마진 구하기
+
+> **초평선 구하는 방법**
+
+---
+
 > **최대 마진**
 
 큰 마진의 결정 경계를 원하는 이유는 일반화 오차가 낮아지는 경향이 있기 때문이다.
