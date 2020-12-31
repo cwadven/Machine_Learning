@@ -37,3 +37,16 @@
 
 - [누락된 데이터 다루기](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter4/4_1_no_data.md "누락된 데이터 다루기")
 - [범주형 데이터 다루기](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter4/4_2_numeric_data.md "범주형 데이터 다루기")
+
+
+### 6장
+### 
+
+- [교차검증](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter6/6_1_pipeline.md "교차검증")
+
+
+### 7장
+### 앙상블
+
+- [앙상블](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/7_1_ensemble.md "앙상블")
+- [앙상블 voting 코드](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/7_2_voting_coding.md "voting 코드")
