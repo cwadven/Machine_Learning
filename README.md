@@ -50,3 +50,4 @@
 
 - [앙상블](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/7_1_ensemble.md "앙상블")
 - [앙상블 voting 코드](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/7_2_voting_coding.md "voting 코드")
+- [앙상블 bagging 코드](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/7_3_bagging_coding.md "bagging 코드")

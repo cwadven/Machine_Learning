@@ -1,4 +1,4 @@
-## 다수결 투표 코드
+## 배깅 작업
 
 > **1. 초기 Import 작업**
 
@@ -16,11 +16,9 @@ from sklearn.model_selection import train_test_split
 
 # ensemble로 이용할 모델 import
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.linear_model import LogisticRegression
 
-# ensemble Voting 이용할 것 import
-from sklearn.ensemble import VotingClassifier
+# ensemble Bagging 이용할 것 import
+from sklearn.ensemble import BaggingClassifier
 
 # ROC 곡선 그리기
 from sklearn.metrics import roc_curve, auc
@@ -78,28 +76,32 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ```python
 # 모델 구축
-# ensemble Voting에 들어갈 모델들 구축
-logistic = LogisticRegression(solver='liblinear', penalty='l2', C=0.001, random_state=1)
+# ensemble Bagging에 들어갈 모델들 구축
 tree = DecisionTreeClassifier(max_depth=None, criterion='entropy', random_state=1)
-knn = KNeighborsClassifier(n_neighbors=1, p=2, metric='minkowski')
 
-# Voting에 들어갈 모델 튜플로 넣기
-# 동시에 들어가게 만들기 위해서
-voting_estimators = [('logistic', logistic), ('tree', tree), ('knn', knn)]
-
-# Voting 만들기
-voting = VotingClassifier(estimators = voting_estimators, voting='soft')
+# Bagging에 모델 만들기
+# n_estimators -> 몇개의 tree를 만들 것인가
+# bagging은 여러개의 tree 모델을 만들 때, 자기가 스스로
+# 여러 파라미터를 랜덤하게 넣어서 학습을 한다.
+bagging = BaggingClassifier(base_estimator=tree,
+                            n_estimators=500,
+                            max_samples=1.0,
+                            max_features=1.0,
+                            bootstrap=True,
+                            bootstrap_features=False,
+                            n_jobs=1,
+                            random_state=1)
 ```
 
 > **6. 모델검정**
 
 ```python
 # 모델 검증할 때 쓰기 위한 값
-clf_labels = ['Logistic regression', 'Decision tree', 'KNN', 'Majority voting']
-all_clf = [logistic, tree, knn, voting]
+clf_labels = ['Decision tree', 'Bagging']
+all_clf = [tree, bagging]
 
 # 반복문을 이용해서 검증하기
-# 원래는 voting만 해주면 되는데, 얼마나 정확한지 알기 위해서
+# 원래는 bagging만 해주면 되는데, 얼마나 정확한지 알기 위해서
 for clf, label in zip(all_clf, clf_labels):
     scores = cross_val_score(estimator=clf,
                             X=X_train, y=y_train,
@@ -148,35 +150,3 @@ plt.show()
 AUC는 저 선까지의 아래쪽 넓이이다!
 
 <img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/img/seq6.PNG" alt="drawing" width="500"/><br><br>
-
-> **9. 하이퍼 파라미터 최적화**
-
-```python
-# 파라미터 결정을 위해서
-voting.get_params()
-
-params = {
-    'logistic__C':[0.001, 0.1, 100.0],
-    'tree__max_depth':[1, 2, 3, 4, 5],
-    'knn__n_neighbors':[1, 3, 5]
-}
-
-# 시간이 오래 걸린다!
-grid = GridSearchCV(
-    estimator=voting,
-    param_grid=params,
-    cv=10,
-    scoring='roc_auc',
-    iid=False
-    )
-
-grid.fit(X_train, y_train)
-
-for r, _ in enumerate(grid.cv_results_['mean_test_score']):
-    print("%0.3f +/- %0.3f %r" % (grid.cv_results_['mean_test_score'][r],
-    grid.cv_results_['std_test_score'][r] / 2.0, grid.cv_results_['params'][r]))
-
-# 위의 반복문을 이용하지 않고 바로 최적에 좋은 파라미터 알기
-print('최적의 파라미터 %s' % grid.best_params_)
-print('AUC %.3f' % grid.best_score_)
-```
