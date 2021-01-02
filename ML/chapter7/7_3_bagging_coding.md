@@ -149,4 +149,4 @@ plt.show()
 
 AUC는 저 선까지의 아래쪽 넓이이다!
 
-<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/img/seq6.PNG" alt="drawing" width="500"/><br><br>
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/img/seq7.PNG" alt="drawing" width="500"/><br><br>
