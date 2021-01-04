@@ -144,7 +144,7 @@ plt.show()
 
 AUC는 저 선까지의 아래쪽 넓이이다!
 
-<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/img/seq9.PNG" alt="drawing" width="500"/><br><br>
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/img/seq9.png" alt="drawing" width="500"/><br><br>
 
 
 > **9. 영향도 있는 값 확인하기**
@@ -175,7 +175,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/img/seq10.PNG" alt="drawing" width="500"/><br><br>
+<img src="https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/img/seq10.png" alt="drawing" width="500"/><br><br>
 
 ```python
 from sklearn.feature_selection import SelectFromModel
