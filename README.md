@@ -54,6 +54,12 @@
 - [앙상블 ababoost 코드](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/7_4_adaboost_coding.md "ababoost 코드")
 - [앙상블 randomforest 코드](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter7/7_5_randomforest_coding.md "randomforest 코드")
 
+### 9장
+### 외부로 합습 모델 빼와서 웹 애플리케이션에 이용하기
+
+- [웹 애플리케이션에 이용하기](https://github.com/cwadven/Machine_Learning/blob/master/ML/chapter9/9_1_sklearn_web.md "웹 애플리케이션에 이용하기")
+
+
 ### 12장
 ### 다층신경망, 텐서플러우, 케라스
 
